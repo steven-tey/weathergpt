@@ -1,5 +1,5 @@
 <a href="https://github.com/steven-tey/weathergpt">
-   <img src="https://user-images.githubusercontent.com/28986134/231839928-5d9035ea-5fd1-44b8-81a6-4a8d4bea1970.png" alt="Logo">
+   <img src="https://weathergpt.vercel.app/opengraph-image.png" alt="OG Image">
 </a>
 
 <h1 align="center">WeatherGPT</h3>
