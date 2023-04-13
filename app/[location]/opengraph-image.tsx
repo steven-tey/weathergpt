@@ -15,14 +15,17 @@ const stats = [
   {
     name: "TEMPERATURE",
     attr: "temp_c",
+    unit: "°C",
   },
   {
     name: "WIND",
     attr: "wind_mph",
+    unit: "mph",
   },
   {
     name: "HUMIDITY",
     attr: "humidity",
+    unit: "%",
   },
 ];
 
@@ -33,7 +36,6 @@ export default async function LocationOG({
 }) {
   const [clashData, interData] = await Promise.all([clash, inter]);
   const data = await getWeatherData(params.location);
-  console.log(data);
 
   return new ImageResponse(
     (
@@ -82,7 +84,7 @@ export default async function LocationOG({
               color: "black",
             }}
           >
-            {stats.map(({ name, attr }) => (
+            {stats.map(({ name, attr, unit }) => (
               <div
                 key={attr}
                 tw="flex flex-col items-center justify-center mx-10"
@@ -97,7 +99,10 @@ export default async function LocationOG({
                 >
                   {name}
                 </p>
-                <p>{data.current[attr]}°C</p>
+                <p>
+                  {data.current[attr]}
+                  {unit}
+                </p>
               </div>
             ))}
           </div>
