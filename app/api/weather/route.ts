@@ -2,9 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { geolocation } from "@vercel/edge";
 import { getWeatherData } from "@/app/lib/utils";
 
-export const config = {
-  runtime: "edge",
-};
+export const runtime = "edge";
 
 export async function GET(req: NextRequest) {
   let location = req.nextUrl.searchParams.get("location");
