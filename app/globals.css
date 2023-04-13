@@ -65,6 +65,23 @@ h1 {
   text-align: center;
 }
 
+.pill {
+  border-radius: 9999px;
+  border: solid 1px var(--accents-2);
+  background: var(--accents-2);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accents-7);
+  text-decoration: none;
+  padding: 8px 16px;
+  margin-bottom: 8px;
+}
+
+.pill:hover {
+  filter: brightness(0.96);
+  transition: filter 0.2s ease;
+}
+
 ::selection {
   background: var(--remix);
   color: var(--bg);

@@ -6,6 +6,14 @@ export function PageData({ data }: { data: any }) {
   return (
     <>
       <main>
+        <a
+          target="_blank"
+          href="https://vercel.com/templates/next.js/weathergpt"
+          rel="noreferrer"
+          className="pill"
+        >
+          Deploy your own to Vercel
+        </a>
         <h1>WeatherGPT</h1>
         <p className="description">
           ChatGPT Plugin to get the weather of any given location
