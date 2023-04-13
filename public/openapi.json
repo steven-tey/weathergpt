@@ -13,8 +13,8 @@
           {
             "name": "location",
             "in": "query",
-            "required": false,
-            "description": "Location for which to retrieve weather information. If not provided, assume user is asking for local weather info.",
+            "required": true,
+            "description": "Location for which to retrieve weather information.",
             "schema": {
               "type": "string"
             }
@@ -147,6 +147,11 @@
                           "description": "Wind gust in kilometer per hour"
                         }
                       }
+                    },
+                    "infoLink": {
+                      "type": "string",
+                      "format": "uri",
+                      "description": "A link to a page with more information about the location's weather in the format https://weathergpt.vercel.app/{location}."
                     }
                   }
                 }
