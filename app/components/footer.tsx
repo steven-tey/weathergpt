@@ -3,7 +3,7 @@ export function Footer({ children }: React.PropsWithChildren<{}>) {
     <footer>
       <a
         target="_blank"
-        href="https://vercel.com/templates/next.js/weathergpt"
+        href="https://chatg.pt/weather"
         aria-label="Vercel"
         rel="noreferrer"
         className="vercel"

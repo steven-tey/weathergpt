@@ -8,7 +8,7 @@ export function PageData({ data }: { data: any }) {
       <main>
         <a
           target="_blank"
-          href="https://vercel.com/templates/next.js/weathergpt"
+          href="https://chatg.pt/weather"
           rel="noreferrer"
           className="pill"
         >
