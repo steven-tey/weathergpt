@@ -1,6 +1,6 @@
 import { headers } from "next/headers";
 import { getWeatherData } from "./lib/utils";
-import { PageData } from "./components/page";
+import { PageData } from "./components/page-data";
 
 export const runtime = "edge";
 
