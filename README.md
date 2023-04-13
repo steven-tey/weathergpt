@@ -24,6 +24,8 @@ https://user-images.githubusercontent.com/28986134/231841036-80da6d5b-b1dd-46e8-
 
 It can also make appropriate recommendations of what outfits to wear given the weather.
 
+![CleanShot 2023-04-13 at 13 16 45](https://user-images.githubusercontent.com/28986134/231851083-4a00ffd8-9372-42b4-a3c8-534b0435ee25.png)
+
 ## Features
 
 - AI-Plugin & OpenAPI JSON specs
