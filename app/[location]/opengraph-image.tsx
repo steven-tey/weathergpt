@@ -3,14 +3,6 @@ import { getWeatherData } from "../lib/utils";
 
 export const runtime = "edge";
 
-const clash = fetch(
-  new URL("../fonts/ClashDisplay-Semibold.otf", import.meta.url)
-).then((res) => res.arrayBuffer());
-
-const inter = fetch(new URL("../fonts/Inter-Bold.ttf", import.meta.url)).then(
-  (res) => res.arrayBuffer()
-);
-
 const stats = [
   {
     name: "TEMPERATURE",
@@ -34,7 +26,10 @@ export default async function LocationOG({
 }: {
   params: { location: string };
 }) {
-  const [clashData, interData] = await Promise.all([clash, inter]);
+  const clashData = await fetch(
+    new URL("../fonts/ClashDisplay-Semibold.otf", import.meta.url)
+  ).then((res) => res.arrayBuffer());
+
   const data = await getWeatherData(params.location);
 
   return new ImageResponse(
@@ -49,6 +44,7 @@ export default async function LocationOG({
           justifyContent: "center",
           flexDirection: "column",
           flexWrap: "nowrap",
+          fontFamily: "Clash",
           backgroundColor: "white",
           backgroundImage:
             "radial-gradient(circle at 25px 25px, lightgray 2%, transparent 0%), radial-gradient(circle at 75px 75px, lightgray 2%, transparent 0%)",
@@ -70,7 +66,6 @@ export default async function LocationOG({
           <b
             style={{
               fontSize: 60,
-              fontFamily: "Clash",
               color: "black",
               lineHeight: 1.8,
             }}
@@ -81,7 +76,6 @@ export default async function LocationOG({
             tw="flex"
             style={{
               fontSize: 48,
-              fontFamily: "Clash",
               color: "black",
             }}
           >
@@ -94,7 +88,6 @@ export default async function LocationOG({
                   style={{
                     fontSize: 28,
                     color: "#71717A",
-                    fontFamily: "Inter",
                     marginBottom: "-36px",
                   }}
                 >
@@ -117,10 +110,6 @@ export default async function LocationOG({
         {
           name: "Clash",
           data: clashData,
-        },
-        {
-          name: "Inter",
-          data: interData,
         },
       ],
       emoji: "blobmoji",
