@@ -4,10 +4,10 @@ import { getWeatherData } from "../lib/utils";
 export const runtime = "edge";
 
 const clash = fetch(
-  new URL("./fonts/ClashDisplay-Semibold.otf", import.meta.url)
+  new URL("../fonts/ClashDisplay-Semibold.otf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-const inter = fetch(new URL("./fonts/Inter-Bold.ttf", import.meta.url)).then(
+const inter = fetch(new URL("../fonts/Inter-Bold.ttf", import.meta.url)).then(
   (res) => res.arrayBuffer()
 );
 
