@@ -5,7 +5,7 @@
 <h1 align="center">WeatherGPT</h3>
 
 <p align="center">
-  The ultimate ChatGPT Plugin starter template.
+   A ChatGPT Plugin starter template built with Next.js 13 App Router, Edge Functions, and Vercel
 </p>
 
 <p align="center">
